@@ -1,6 +1,8 @@
 package com.zhangxin.algorithm.demo.LeetCode;
 
 /**
+ * easy
+ *
  * Implement pow(x, n), which calculates x raised to the power n (xn).
  */
 public class Pow {
