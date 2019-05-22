@@ -20,11 +20,11 @@ package com.zhangxin.algorithm.demo.LeetCode;
  *
  */
 public class ReverseInteger {
-    public static int reverse(int x) {
+    private static int reverse(int x) {
         try {
             String xStr = x + "";
-            StringBuffer xStrBuffer = new StringBuffer(xStr);
-            String resultStr = xStrBuffer.reverse().toString();
+            StringBuilder xStrBuilder = new StringBuilder(xStr);
+            String resultStr = xStrBuilder.reverse().toString();
             if(x > 0){
                 return Integer.parseInt(resultStr);
             }else{

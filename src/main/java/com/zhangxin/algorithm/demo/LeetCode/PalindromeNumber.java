@@ -6,7 +6,7 @@ package com.zhangxin.algorithm.demo.LeetCode;
  * Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
  */
 public class PalindromeNumber {
-    public static boolean isPalindrome(int x) {
+    private static boolean isPalindrome(int x) {
         try {
             if(x < 0){
                 return false;

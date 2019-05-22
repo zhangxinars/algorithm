@@ -17,7 +17,7 @@ package com.zhangxin.algorithm.demo.LeetCode;
  */
 public class TwoSum {
 
-    public static int[] twoSum(int[] nums, int target) {
+    private static int[] twoSum(int[] nums, int target) {
         int sum;
         int[] list = new int[2];
         for (int a = 0; a < nums.length - 1; a++) {

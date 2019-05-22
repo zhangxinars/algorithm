@@ -6,7 +6,7 @@ package com.zhangxin.algorithm.demo.LeetCode;
  * Implement pow(x, n), which calculates x raised to the power n (xn).
  */
 public class Pow {
-    public static double myPow(double x, int n) {
+    private static double myPow(double x, int n) {
         if(n == 0){
             return 1;
         }
