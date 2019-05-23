@@ -31,9 +31,7 @@ public class ValidParentheses {
     }
 
     private static boolean isValid2(String s){
-        if (s.length() % 2 != 0){
-            return false;
-        }
+        if (s.length() % 2 != 0) return false;
         ArrayList<Character> stack = new ArrayList<Character>();
         int len = s.length();
         int size = 0;
