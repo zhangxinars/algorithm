@@ -99,7 +99,7 @@ public class PracticeChapterOne {
     }
 
     /**
-     * 下面这段程序会打印出什么?
+     * 1.1.6 下面这段程序会打印出什么?
      *        int f = 0;
      *        int g = 1;
      *        for (int i = 0; i <= 15; i++)
@@ -120,6 +120,70 @@ public class PracticeChapterOne {
             f = f + g;
             g = f - g;
         }
+    }
+
+    /**
+     * 1.1.7 分别给出以下代码段打印出的值:
+     * a. double t = 9.0;
+     * while (Math.abs(t - 9.0/t) > .001)
+     *            t = (9.0/t + t) / 2.0;
+     *         StdOut.printf("%.5f\n", t);
+     *
+     * b. int sum = 0;
+     * for (int i = 1; i < 1000; i++)
+     *            for (int j = 0; j < i; j++)
+     *                sum++;
+     *         StdOut.println(sum);
+     *
+     * c. int sum = 0;
+     * for (int i = 1; i < 1000; i *= 2)
+     *            for (int j = 0; j < 1000; j++)
+     *                sum++;
+     *         StdOut.println(sum);
+     *
+     * 3.00009
+     * 499500
+     * 10000
+     */
+    @Test
+    public void practice117(){
+        double t = 9.0;
+        while (Math.abs(t - 9.0/t) > .001)
+            t = (9.0/t + t) / 2.0;
+        StdOut.printf("%.5f\n", t);
+
+        int sum = 0;
+        for (int i = 1; i < 1000; i++)
+            for (int j = 0; j < i; j++)
+                sum++;
+        StdOut.println(sum);
+
+        int sum2 = 0;
+        for (int i = 1; i < 1000; i *= 2)
+            for (int j = 0; j < 1000; j++)
+                sum2++;
+        StdOut.println(sum2);
+    }
+
+    /**
+     * 1.1.8 下列语句会打印出什么结果?给出解释。
+     * a. System.out.println('b');
+     * b. System.out.println('b' + 'c');
+     * c. System.out.println((char) ('a' + 4));
+     */
+    @Test
+    public void practice118(){
+        System.out.println('b');
+        System.out.println('b' + 'c');
+        System.out.println((char) ('a' + 4));
+    }
+
+    /**
+     * 1.1.9 编写一段代码，将一个正整数 N 用二进制表示并转换为一个 String 类型的值 s。
+     */
+    @Test
+    public void practice119(){
+
     }
 
     public static void main(String[] args) {
