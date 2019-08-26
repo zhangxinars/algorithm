@@ -170,6 +170,10 @@ public class PracticeChapterOne {
      * a. System.out.println('b');
      * b. System.out.println('b' + 'c');
      * c. System.out.println((char) ('a' + 4));
+     *
+     * b
+     * 197
+     * e
      */
     @Test
     public void practice118(){
@@ -183,7 +187,18 @@ public class PracticeChapterOne {
      */
     @Test
     public void practice119(){
+        int N = 100;
+        String s = "";
+        for (int n = N; n > 0; n /= 2)
+            s = (n % 2) + s;
+        System.out.println(s);
+    }
 
+    /**
+     * 1.1.11 编写一段代码，打印出一个二维布尔数组的内容。其中，使用 * 表示真，空格表示假。打印出行号和列号。
+     */
+    public void practice1111(){
+        boolean[][] a = {{true,false,true},{false,true,false},{true,true,true}};
     }
 
     public static void main(String[] args) {
