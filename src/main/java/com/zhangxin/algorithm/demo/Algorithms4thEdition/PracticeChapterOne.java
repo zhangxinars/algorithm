@@ -197,9 +197,53 @@ public class PracticeChapterOne {
     /**
      * 1.1.11 编写一段代码，打印出一个二维布尔数组的内容。其中，使用 * 表示真，空格表示假。打印出行号和列号。
      */
+    @Test
     public void practice1111(){
         boolean[][] a = {{true,false,true},{false,true,false},{true,true,true}};
+        for(int i = 0; i < a.length; i++){
+            boolean b[] = a[i];
+            for(int j = 0; j < b.length; j++ ){
+                String s = "";
+                if(a[i][j]){
+                    s = "*";
+                }
+                System.out.println("第" + (int)(i+1) + "行" + "第" + (int)(j+1) + "列:" + s);
+            }
+        }
     }
+
+    /**
+     * 1.1.12 以下代码段会打印出什么结果?
+     * 0 1 2 3 4 5 6 7 8 9
+     */
+    @Test
+    public void practice1112(){
+        int[] a = new int[10];
+        for (int i = 0; i < 10; i++)
+            a[i] = 9 - i;
+        for (int i = 0; i < 10; i++)
+            a[i] = a[a[i]];
+        for (int i = 0; i < 10; i++)
+            System.out.println(i);
+    }
+
+    /**
+     * 1.1.13 编写一段代码，打印出一个 M 行 N 列的二维数组的转置(交换行和列)。
+     */
+    @Test
+    public void practice1113(){
+        int[][] a = {{1,2,3},{4,5,6},{7,8,9}};
+        for(int i = 0; i < a.length; i++){
+            int b[] = a[i];
+            for(int j = 0; j < b.length; j++ ){
+                String s = "";
+                System.out.print(a[j][i] + "    ");
+            }
+            System.out.println();
+        }
+    }
+
+
 
     public static void main(String[] args) {
         practice113();
