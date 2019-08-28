@@ -77,7 +77,7 @@ public class PracticeChapterOne {
      * c. if (a > b) c = 0;                无问题
      * d. if (a > b) c = 0 else b = 0;     缺少分号和花括号
      */
-    public void practice114(){
+    public void practice114() {
         int a = 0;
         int b = 1;
         int c;
@@ -100,13 +100,13 @@ public class PracticeChapterOne {
 
     /**
      * 1.1.6 下面这段程序会打印出什么?
-     *        int f = 0;
-     *        int g = 1;
-     *        for (int i = 0; i <= 15; i++)
-     *        {
-     *           StdOut.println(f);
-     *           f = f + g;
-     *           g = f - g;
+     * int f = 0;
+     * int g = 1;
+     * for (int i = 0; i <= 15; i++)
+     * {
+     *      StdOut.println(f);
+     *      f = f + g;
+     *      g = f - g;
      * }
      * 一个斐波那契数列
      */
@@ -114,8 +114,7 @@ public class PracticeChapterOne {
     public void practice116() {
         int f = 0;
         int g = 1;
-        for (int i = 0; i <= 15; i++)
-        {
+        for (int i = 0; i <= 15; i++) {
             StdOut.println(f);
             f = f + g;
             g = f - g;
@@ -126,30 +125,30 @@ public class PracticeChapterOne {
      * 1.1.7 分别给出以下代码段打印出的值:
      * a. double t = 9.0;
      * while (Math.abs(t - 9.0/t) > .001)
-     *            t = (9.0/t + t) / 2.0;
-     *         StdOut.printf("%.5f\n", t);
+     * t = (9.0/t + t) / 2.0;
+     * StdOut.printf("%.5f\n", t);
      *
      * b. int sum = 0;
      * for (int i = 1; i < 1000; i++)
-     *            for (int j = 0; j < i; j++)
-     *                sum++;
-     *         StdOut.println(sum);
+     * for (int j = 0; j < i; j++)
+     * sum++;
+     * StdOut.println(sum);
      *
      * c. int sum = 0;
      * for (int i = 1; i < 1000; i *= 2)
-     *            for (int j = 0; j < 1000; j++)
-     *                sum++;
-     *         StdOut.println(sum);
+     * for (int j = 0; j < 1000; j++)
+     * sum++;
+     * StdOut.println(sum);
      *
      * 3.00009
      * 499500
      * 10000
      */
     @Test
-    public void practice117(){
+    public void practice117() {
         double t = 9.0;
-        while (Math.abs(t - 9.0/t) > .001)
-            t = (9.0/t + t) / 2.0;
+        while (Math.abs(t - 9.0 / t) > .001)
+            t = (9.0 / t + t) / 2.0;
         StdOut.printf("%.5f\n", t);
 
         int sum = 0;
@@ -176,7 +175,7 @@ public class PracticeChapterOne {
      * e
      */
     @Test
-    public void practice118(){
+    public void practice118() {
         System.out.println('b');
         System.out.println('b' + 'c');
         System.out.println((char) ('a' + 4));
@@ -186,7 +185,7 @@ public class PracticeChapterOne {
      * 1.1.9 编写一段代码，将一个正整数 N 用二进制表示并转换为一个 String 类型的值 s。
      */
     @Test
-    public void practice119(){
+    public void practice119() {
         int N = 100;
         String s = "";
         for (int n = N; n > 0; n /= 2)
@@ -198,16 +197,16 @@ public class PracticeChapterOne {
      * 1.1.11 编写一段代码，打印出一个二维布尔数组的内容。其中，使用 * 表示真，空格表示假。打印出行号和列号。
      */
     @Test
-    public void practice1111(){
-        boolean[][] a = {{true,false,true},{false,true,false},{true,true,true}};
-        for(int i = 0; i < a.length; i++){
+    public void practice1111() {
+        boolean[][] a = {{true, false, true}, {false, true, false}, {true, true, true}};
+        for (int i = 0; i < a.length; i++) {
             boolean b[] = a[i];
-            for(int j = 0; j < b.length; j++ ){
+            for (int j = 0; j < b.length; j++) {
                 String s = "";
-                if(a[i][j]){
+                if (a[i][j]) {
                     s = "*";
                 }
-                System.out.println("第" + (int)(i+1) + "行" + "第" + (int)(j+1) + "列:" + s);
+                System.out.println("第" + (int) (i + 1) + "行" + "第" + (int) (j + 1) + "列:" + s);
             }
         }
     }
@@ -217,7 +216,7 @@ public class PracticeChapterOne {
      * 0 1 2 3 4 5 6 7 8 9
      */
     @Test
-    public void practice1112(){
+    public void practice1112() {
         int[] a = new int[10];
         for (int i = 0; i < 10; i++)
             a[i] = 9 - i;
@@ -231,11 +230,11 @@ public class PracticeChapterOne {
      * 1.1.13 编写一段代码，打印出一个 M 行 N 列的二维数组的转置(交换行和列)。
      */
     @Test
-    public void practice1113(){
-        int[][] a = {{1,2,3},{4,5,6},{7,8,9}};
-        for(int i = 0; i < a.length; i++){
+    public void practice1113() {
+        int[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        for (int i = 0; i < a.length; i++) {
             int b[] = a[i];
-            for(int j = 0; j < b.length; j++ ){
+            for (int j = 0; j < b.length; j++) {
                 String s = "";
                 System.out.print(a[j][i] + "    ");
             }
@@ -243,7 +242,108 @@ public class PracticeChapterOne {
         }
     }
 
+    /**
+     * 1.1.14 编写一个静态方法 lg()，接受一个整型参数 N，返回不大于 log2N 的最大整数。不要使用 Math 库。
+     */
+    @Test
+    public void practice1114() {
+        int N = 10;
+        int a = lg(N);
+        System.out.println(a);
+    }
 
+    public static int lg(int n) {
+        int a = 0;
+        int i = 1;
+        if (n < 0) {
+            return -1;
+        }
+
+        while (i <= n) {
+            i = 2 * i;
+            a++;
+        }
+
+        return a - 1;
+    }
+
+    /**
+     * 1.1.15
+     * 编写一个静态方法 histogram()，接受一个整型数组 a[] 和一个整数 M 为参数并返回一个大小为 M 的数组，
+     * 其中第 i 个元素的值为整数 i 在参数数组中出现的次数。如果 a[] 中的值均在 0 到 M-1之间，
+     * 返回数组中所有元素之和应该和 a.length 相等。
+     */
+    @Test
+    public void practice1115() {
+        int[] a = {1, 2, 3, 2, 2, 3, 4, 1, 2, 0};
+        int[] result = histogram(a, 5);
+        for (int b : result)
+            System.out.print(b + "  ");
+    }
+
+    public static int[] histogram(int[] a, int M) {
+        int[] result = new int[M];
+        for (int i = 0; i < M; i++) {
+            int temp = 0;
+            for (int j = 0; j < a.length; j++) {
+                if (a[j] == i) {
+                    temp++;
+                }
+                result[i] = temp;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 1.1.16 给出 exR1(6) 的返回值:
+     * public static String exR1(int n){
+     *      if (n <= 0) return "";
+     *      return exR1(n-3) + n + exR1(n-2) + n;
+     * }
+     *
+     * 311361142246
+     */
+    @Test
+    public void practice1116() {
+        System.out.println(exR1(6));
+    }
+
+    public static String exR1(int n) {
+        if (n <= 0) return "";
+        return exR1(n - 3) + n + exR1(n - 2) + n;
+    }
+
+    /**
+     * 1.1.18 请看以下递归函数:
+     * public static int mystery(int a, int b){
+     *      if (b == 0)     return 0;
+     *      if (b % 2 == 0) return mystery(a+a, b/2);
+     *      return mystery(a+a, b/2) + a;
+     * }
+     * mystery(2, 25) 和 mystery(3, 11) 的返回值是多少?给定正整数 a 和 b，mystery(a,b)
+     * 计算的结果是什么?将代码中的 + 替换为 * 并将 return 0 改为 return 1，然后回答相同
+     * 的问题。
+     */
+    @Test
+    public void practice1118() {
+        System.out.println(mystery1(2, 25));
+        System.out.println(mystery1(3, 11));
+        System.out.println(mystery2(2, 25));
+        System.out.println(mystery2(3, 11));
+    }
+
+    public static int mystery1(int a, int b) {
+        if (b == 0) return 0;
+        if (b % 2 == 0) return mystery1(a + a, b / 2);
+        return mystery1(a + a, b / 2) + a;
+    }
+
+    public static int mystery2(int a, int b) {
+        if (b == 0) return 1;
+        if (b % 2 == 0) return mystery2(a + a, b / 2);
+        return mystery2(a * a, b / 2) + a;
+    }
 
     public static void main(String[] args) {
         practice113();
