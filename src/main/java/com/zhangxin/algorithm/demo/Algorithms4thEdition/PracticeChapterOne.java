@@ -46,31 +46,6 @@ public class PracticeChapterOne {
     }
 
     /**
-     * 1.1.3 编写一个程序，从命令行得到三个整数参数。如果它们都相等则打印 equal，否则打印 not equal。
-     */
-    public static void practice113() {
-        System.out.println("请输入三个整数:");
-        Scanner scanner1 = new Scanner(System.in);
-        String string1 = scanner1.next();
-
-        Scanner scanner2 = new Scanner(System.in);
-        String string2 = scanner2.next();
-
-        Scanner scanner3 = new Scanner(System.in);
-        String string3 = scanner3.next();
-
-        Integer a = Integer.parseInt(string1);
-        Integer b = Integer.parseInt(string2);
-        Integer c = Integer.parseInt(string3);
-
-        if (a.equals(b) && b.equals(c) && a.equals(c)) {
-            System.out.println("equal");
-        } else {
-            System.out.println("not equal");
-        }
-    }
-
-    /**
      * 1.1.4 下列语句各有什么问题(如果有的话)?
      * a. if (a > b) then c = 0;           Java无then关键字
      * b. if a > b { c = 0; }              a > b应该用()包起来
@@ -345,7 +320,97 @@ public class PracticeChapterOne {
         return mystery2(a * a, b / 2) + a;
     }
 
+    /**
+     * 1.1.20 编写一个递归的静态方法计算 ln(N!) 的值。
+     */
+    @Test
+    public void practice1120() {
+
+    }
+
+    public static double lnNFactorial(int N) {
+
+    }
+}
+
+/**
+ * 1.1.3 编写一个程序，从命令行得到三个整数参数。如果它们都相等则打印 equal，否则打印 not equal。
+ */
+class practice113 {
+    public static void practice113() {
+        System.out.println("请输入三个整数:");
+        Scanner scanner1 = new Scanner(System.in);
+        String string1 = scanner1.next();
+
+        Scanner scanner2 = new Scanner(System.in);
+        String string2 = scanner2.next();
+
+        Scanner scanner3 = new Scanner(System.in);
+        String string3 = scanner3.next();
+
+        Integer a = Integer.parseInt(string1);
+        Integer b = Integer.parseInt(string2);
+        Integer c = Integer.parseInt(string3);
+
+        if (a.equals(b) && b.equals(c) && a.equals(c)) {
+            System.out.println("equal");
+        } else {
+            System.out.println("not equal");
+        }
+    }
+
     public static void main(String[] args) {
         practice113();
+    }
+}
+
+/**
+ * 1.1.19 在计算机上运行以下程序:
+ *
+ * public class Fibonacci
+ *         {
+ *            public static long F(int N)
+ *            {
+ *               if (N == 0) return 0;
+ *               if (N == 1) return 1;
+ *               return F(N-1) + F(N-2);
+ *            }
+ *            public static void main(String[] args)
+ *            {
+ *               for (int N = 0; N < 100; N++)
+ *                  StdOut.println(N + " " + F(N));
+ *            }
+ *         }
+ * 计算机用这段程序在一个小时之内能够得到 F(N) 结果的最大 N 值是多少?开发 F(N) 的一
+ * 个更好的实现，用数组保存已经计算过的值。
+ *
+ * 尾递归
+ */
+class Fibonacci {
+    public static long F(int N) {
+        if (N == 0) return 0;
+        if (N == 1) return 1;
+        return F(N - 1) + F(N - 2);
+    }
+
+    public static long Fib(int N) {
+        long[] f = new long[N+1];
+        return Fib(N, f);
+    }
+
+    public static long Fib(int N, long[] f) {
+        if (f[N] == 0) {
+            if (N == 1)
+                f[N] = 1;
+            else if (N > 1)
+                f[N] = Fib(N-1, f) + Fib(N-2, f);
+        }
+
+        return f[N];
+    }
+
+    public static void main(String[] args) {
+        for (int N = 0; N < 100; N++)
+            StdOut.println(N + " " + Fib(N));
     }
 }
