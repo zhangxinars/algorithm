@@ -325,11 +325,23 @@ public class PracticeChapterOne {
      */
     @Test
     public void practice1120() {
-
+        double result = lnNFactorial(10);
+        System.out.println(result);
     }
 
     public static double lnNFactorial(int N) {
+        int NFactorial = factorial(N);
+        return Math.log(NFactorial) / Math.log(Math.E);
+    }
 
+    public static int factorial(int x) {
+        if (x < 0) {
+            throw new IllegalArgumentException("x must be>=0");
+        }
+        if (x <= 1) {
+            return 1;
+        } else
+            return x * factorial(x - 1);
     }
 }
 
