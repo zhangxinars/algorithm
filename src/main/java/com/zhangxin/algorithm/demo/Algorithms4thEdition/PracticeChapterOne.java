@@ -415,7 +415,6 @@ public class PracticeChapterOne {
 
         System.out.println(a + "," + b + "," + c);
     }
-
 }
 
 /**
