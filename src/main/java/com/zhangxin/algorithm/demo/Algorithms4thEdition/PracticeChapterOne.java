@@ -398,6 +398,7 @@ public class PracticeChapterOne {
         System.out.println("a : " + a + "  b : " + b);
         return gcd(b, a%b);
     }
+<<<<<<< HEAD
 
     /**
      * 1.1.26 将三个数字排序。假设 a、b、c 和 t 都是同一种原始数字类型的变量。证明以下代码能够将 a、 b、c 按照升序排列:
@@ -417,6 +418,8 @@ public class PracticeChapterOne {
     }
 
 
+=======
+>>>>>>> 879e95983696515ebea28df53dcf1bb2082134a0
 }
 
 /**
