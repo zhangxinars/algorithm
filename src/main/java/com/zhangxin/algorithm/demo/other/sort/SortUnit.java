@@ -26,4 +26,18 @@ public class SortUnit {
         arr[a] = arr[b];
         arr[b] = temp;
     }
+
+    /**
+     * 生成随机数组
+     * @param maxSize 最大长度
+     * @param maxValue 值范围（绝对值）
+     * @return 生成的随机数组
+     */
+    public static int[] generateRandomArray(int maxSize, int maxValue) {
+        int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
+        }
+        return arr;
+    }
 }
